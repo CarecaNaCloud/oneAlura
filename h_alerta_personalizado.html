@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> <!--Unicode Transformation Format-->
+    </head>
+    <body>
+        <script>
+
+            function alertaPersonalizado(mensagem) {
+                alert("*** " + mensagem + " ***");
+            }
+
+            function pulaLinha() {
+                document.write("<br><br>");
+            }
+
+            function mostra(texto) {
+                document.write(texto);
+                pulaLinha();
+            }
+
+            alertaPersonalizado("Hello world");
+
+            pulaLinha();
+            mostra("Hello world");
+            mostra("Dentro do desenvolvimento de softwares a construção se dá pelo aninhamento de funções dentro de funções, também deve ser observado que cada função deve executar uma única ação, isso permite maior flexibilidade e mantém o código limpo, além disso as funções possuem a propriedade de encapsulamento, o que facilita e atrai essa construção!")
+            
+
+        </script>
+    </body>
+</html>
