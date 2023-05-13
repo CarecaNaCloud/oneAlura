@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" /> <!--Unicode transformation format-->
+    </head>
+    <body>
+        <script>
+            
+            function pulaLinha() {
+                document.write("<br");
+            };
+
+            function mostra(texto) {
+                document.write(texto);
+                pulaLinha();
+            };
+
+            let numeroDeVitorias = parseInt(prompt("Quantas vitórias seu time teve até agora?"));
+            let quantidadeDeEmpates = parseInt(prompt("Quantas vitórias seu time teve até agora?"));
+            let totalDePontos = (numeroDeVitorias * 3) + quantidadeDeEmpates;
+
+            mostra("Seu time está com " + totalDePontos + " pontos até o momento.");
+
+            if (totalDePontos > 28) {
+                mostra("comparado ao ano passado está indo bem!");
+            } else if (totalDePontos == 28) {
+                mostra("Está com o mesmo resultado do ano passado.");
+            } else {
+                mostra("Está pior que o ano passado.");
+            };
+            
+            mostra("FIM!");
+            
+        </script>
+    </body>
+</html>
