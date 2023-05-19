@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" /> <!--Unicode Transformation Format-->
+    </head>
+    <body>
+        <script>
+            
+            function pulaLinha() {
+                document.write("<br>");
+            };
+
+            function mostra(texto) {
+
+                document.write(texto);
+                pulaLinha();
+                pulaLinha();
+            };
+
+            let totalDePessoas = prompt("De quantas pessoas vamos calcular a média de idade?");
+
+            let contadorDePessoas = 1;
+
+            let somaDasIdades = 0;
+
+            if ( totalDePessoas > 0 ) {
+            
+                if ( totalDePessoas == 1 ) {
+                   
+                    let idade = prompt("Qual a idade?");
+                    mostra("A idade média dessa pessoa é a sua própria idade.");
+                
+                } else {
+
+                    while ( contadorDePessoas <= totalDePessoas ) {
+
+                        let posicaoDaPessoa = contadorDePessoas;
+                        let idade = parseInt(prompt("Qual a idade da " + posicaoDaPessoa + " \u00AA pessoa?"));
+
+                        somaDasIdades += idade;
+                        contadorDePessoas++;
+                    };
+                    
+                    let mediaDasIdades = somaDasIdades / totalDePessoas;
+        
+                    mostra("A media das idades passadas dessas " + totalDePessoas + " pessoas é " + mediaDasIdades + ".");
+
+                };
+            
+            };
+
+            mostra("FIM!");
+
+        </script>
+    </body>
+</html>
